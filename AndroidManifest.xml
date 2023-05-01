@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="13"
+    android:versionName="2017.09.05"
+    package="com.delan.app.germanybluetooth"
+    platformBuildVersionCode="25"
+    platformBuildVersionName="7.1.1">
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="23" />
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:theme="@ref/0x7f090081"
+        android:label="@ref/0x7f060033"
+        android:icon="@ref/0x7f03000a"
+        android:name="com.delan.app.germanybluetooth.MyApplication"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+
+        <activity
+            android:theme="@ref/0x0103000a"
+            android:name="com.delan.app.germanybluetooth.bluetooth.WelcomeActivity"
+            android:screenOrientation="1">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.MainActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.MoreActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.DeviceListActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.RoomDevicesActivity"
+            android:screenOrientation="1"
+            android:windowSoftInputMode="0x20" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.SettingActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.HolidayActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.SettingTemperature"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.ProtectWindowActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.ProgTimeActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.ProgmaticDevicesActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.ProgmaticSettingsActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.ProgmaticTemperatureActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.ProgmaticHolidayActivity"
+            android:screenOrientation="1" />
+
+        <activity
+            android:name="com.delan.app.germanybluetooth.bluetooth.VersionListActivity"
+            android:screenOrientation="1" />
+
+        <service
+            android:name="com.delan.app.germanybluetooth.bluetooth.BleService" />
+
+        <service
+            android:name="com.delan.app.germanybluetooth.bluetooth.DataBaseService" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@ref/0x7f0a0004" />
+
+        <activity
+            android:theme="@ref/0x01030010"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.delan.app.germanybluetooth.firebaseinitprovider"
+            android:initOrder="100" />
+    </application>
+</manifest>
